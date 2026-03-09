@@ -1,0 +1,5 @@
+libshared1.so
+libshared2.so
+libshared1.so
+libshared1.so
+exit
