@@ -1,0 +1,1 @@
+The repository had a lot of .out files and build folder from cmake. Repository should not contain binaries, executables and object files, as repository is only meant for source code and documentation. I have deleted these files and added .gitignore to stop tracking them. No score is deducted for this as this is not a part of homework. 
