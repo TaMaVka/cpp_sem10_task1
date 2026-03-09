@@ -1,5 +1,0 @@
-/mnt/c/Users/User/Desktop/MIPT/cpp/sem9/cpp-5/06.05/build/CMakeFiles/shared1.dir
-/mnt/c/Users/User/Desktop/MIPT/cpp/sem9/cpp-5/06.05/build/CMakeFiles/shared2.dir
-/mnt/c/Users/User/Desktop/MIPT/cpp/sem9/cpp-5/06.05/build/CMakeFiles/06.05.out.dir
-/mnt/c/Users/User/Desktop/MIPT/cpp/sem9/cpp-5/06.05/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/User/Desktop/MIPT/cpp/sem9/cpp-5/06.05/build/CMakeFiles/rebuild_cache.dir
