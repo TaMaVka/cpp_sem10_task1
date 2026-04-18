@@ -14,6 +14,7 @@ namespace fs = std::filesystem;
 
 // Hash Functions from https://www.partow.net/programming/hashfunctions/#AvailableHashFunctions
 
+// Could have changed them to function_name(const std::string&) 
 unsigned int RSHash(const char* str, unsigned int length)
 {
    unsigned int b    = 378551;
@@ -173,6 +174,12 @@ std::string generateRandomString(std::size_t length)
     return random_string;
 }
 
+// Why does your code have char * 
+// For c++ code only use std::string
+// char * is c style programming
+// I think you could have just used std::string and std::function
+// unsigned int (*hashFunc)(const char*, unsigned int) -> std::function<unsigned int>(const std::string&)
+
 // Function to test a hash function and count collisions
 std::map<unsigned int, int> testHashFunction(unsigned int (*hashFunc)(const char*, unsigned int), const std::vector<std::string>& strings)
 {
@@ -189,6 +196,9 @@ std::map<unsigned int, int> testHashFunction(unsigned int (*hashFunc)(const char
 int calculateCollisions(const std::map<unsigned int, int>& hash_counts)
 {
     int collisions = 0;
+    // C++ 17 >, you can just do
+    // for (const auto& [hash_value, count_coourence]&: hash_counts)
+    // second first is not informative
     for (const auto& pair : hash_counts)
     {
         if (pair.second > 1)
@@ -230,6 +240,8 @@ void run_all_tests()
 
     // Open a CSV file to store results for plotting
     std::ofstream results_file(RESULTS_DIR + "/collision_results.csv");
+    
+    // You are not supposed to repeat code by copy pasting, you use a for loop on your hash_functions, and make this list with code not with hand
     results_file << "NumStrings,RSHash,JSHash,PJWHash,ELFHash,BKDRHash,SDBMHash,DJBHash,DEKHash,APHash\n";
 
     // Iterate through different numbers of strings
@@ -255,7 +267,7 @@ void run_all_tests()
     }
 
     results_file.close();
-    std::cout << "Collision results saved to " << RESULTS_DIR << "/collision_results.csv\n";
+    std::cout << "Collision results saved to " << RESULTS_DIR << "/collision_results.csv\n"; // collision_results.csv HERE and line 242, you are typing it manually, it should be a variable like RESULTS_DIR
     std::cout << "All tests passed successfully!\n";
 }
 
@@ -264,3 +276,9 @@ int main()
     run_all_tests();
     return 0;
 }
+
+/*
+ * The result and conclusion is good!
+ * Code can be made better
+ * Score is 8/10
+ */

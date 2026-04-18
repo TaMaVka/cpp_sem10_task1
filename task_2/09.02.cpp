@@ -85,7 +85,7 @@ public:
             std::cout << "Tree is empty." << std::endl;
             return;
         }
-        dfs_recursive(root);
+        dfs_recursive(root); // For large tree you get stack overflow use std::stack 
         std::cout << std::endl;
     }
 
@@ -147,3 +147,6 @@ int main()
     std::cout << "\nExited main scope. All resources should be deallocated." << std::endl;
     return 0;
 }
+
+
+// Score is 9/10
