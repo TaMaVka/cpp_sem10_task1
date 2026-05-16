@@ -75,7 +75,7 @@ static const char *L[] = {
     "    assert(std::strcmp(L[LINE_COUNT - 1], \"}\") == 0);",
     "    // test: required header cstdio is present",
     "    assert(std::strcmp(L[1], \"#include <cstdio>\") == 0);",
-    "    std::printf(\"All tests passed.\\n\");",
+    "    // If you see this in terminal that means that all tests passed.",
     "    emit_source();",
     "}",
     "",
@@ -141,7 +141,7 @@ static void run_tests_and_demonstration() {
     assert(std::strcmp(L[LINE_COUNT - 1], "}") == 0);
     // test: required header cstdio is present
     assert(std::strcmp(L[1], "#include <cstdio>") == 0);
-    std::printf("All tests passed.\n");
+    // If you see this in terminal that means that all tests passed.
     emit_source();
 }
 
